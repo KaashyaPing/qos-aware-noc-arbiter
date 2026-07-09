@@ -308,4 +308,82 @@ Simulation results confirmed correct arbitration behavior across all verificatio
 | Congestion Monitoring      |    ✅   |
 | Performance Counters       |    ✅   |
 | GTKWave Verification       |    ✅   |
+---
+
+# Waveform Gallery
+
+The following waveforms were captured using **GTKWave** during functional verification of the QoS-Aware NoC Traffic Arbitration IP.
+
+## Round-Robin Arbitration
+
+The waveform below demonstrates fair arbitration among masters with equal priority. The grant rotates sequentially, ensuring that no requester is continuously favored.
+
+<p align="center">
+  <img src="docs/round_robin.png" alt="Round Robin Arbitration" width="900"/>
+</p>
+
+---
+
+## QoS-Aware Scheduling
+
+This waveform demonstrates arbitration based on programmable QoS priorities. Higher-priority requests are serviced first while preserving fairness among requests with the same priority.
+
+<p align="center">
+  <img src="docs/qos.png" alt="QoS Scheduling" width="900"/>
+</p>
+
+---
+
+## APB Write Transaction
+
+The APB write interface is used to configure runtime parameters such as QoS priorities, age limit, and congestion threshold.
+
+<p align="center">
+  <img src="docs/apb_write.png" alt="APB Write" width="900"/>
+</p>
+
+---
+
+## APB Read Transaction
+
+The APB read interface provides software access to configuration registers and runtime performance counters.
+
+<p align="center">
+  <img src="docs/apb_read.png" alt="APB Read" width="900"/>
+</p>
+
+---
+---
+
+# Future Enhancements
+
+The current implementation provides a configurable and reusable QoS-aware arbitration IP. Several enhancements could further extend its capabilities for larger SoC and NoC deployments.
+
+* Support for a configurable number of masters using parameterized RTL.
+* Weighted Round-Robin (WRR) arbitration for bandwidth allocation.
+* Dynamic QoS adaptation based on traffic conditions.
+* Migration from an APB interface to an AXI4-Lite configuration interface.
+* Integration into a larger multi-router Network-on-Chip architecture.
+* UVM-based constrained-random verification environment.
+* Formal verification using SystemVerilog Assertions (SVA) and formal property checking.
+* Synthesis, timing, and resource utilization analysis on FPGA platforms.
+* Support for configurable arbitration policies selectable at runtime.
+
+---
+
+# Technologies Used
+
+* Verilog HDL
+* Icarus Verilog
+* GTKWave
+* Visual Studio Code
+* Git & GitHub
+* Draw.io
+
+---
+
+# License
+
+This project is released under the MIT License. See the `LICENSE` file for additional information.
+---
 
