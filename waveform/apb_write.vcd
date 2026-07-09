@@ -1,0 +1,305 @@
+$date
+	Tue Jul 07 18:40:03 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_apb_write $end
+$var wire 4 ! grant [3:0] $end
+$var wire 1 " PREADY $end
+$var wire 32 # PRDATA [31:0] $end
+$var reg 8 $ PADDR [7:0] $end
+$var reg 1 % PENABLE $end
+$var reg 1 & PSEL $end
+$var reg 32 ' PWDATA [31:0] $end
+$var reg 1 ( PWRITE $end
+$var reg 1 ) clk $end
+$var reg 4 * req [3:0] $end
+$var reg 1 + reset $end
+$scope module DUT $end
+$var wire 8 , PADDR [7:0] $end
+$var wire 1 % PENABLE $end
+$var wire 1 & PSEL $end
+$var wire 32 - PWDATA [31:0] $end
+$var wire 1 ( PWRITE $end
+$var wire 1 ) clk $end
+$var wire 4 . req [3:0] $end
+$var wire 1 + reset $end
+$var reg 32 / PRDATA [31:0] $end
+$var reg 1 " PREADY $end
+$var reg 3 0 active_requests [2:0] $end
+$var reg 4 1 age_limit_reg [3:0] $end
+$var reg 2 2 aged_request [1:0] $end
+$var reg 1 3 aged_request_found $end
+$var reg 1 4 congestion $end
+$var reg 2 5 congestion_level [1:0] $end
+$var reg 3 6 congestion_threshold_reg [2:0] $end
+$var reg 4 7 grant [3:0] $end
+$var reg 1 8 high_pri_found $end
+$var reg 2 9 high_pri_request [1:0] $end
+$var reg 2 : highest_priority [1:0] $end
+$var reg 2 ; next_pointer [1:0] $end
+$var reg 2 < pointer [1:0] $end
+$var reg 4 = same_pri_req [3:0] $end
+$var reg 32 > starvation_events [31:0] $end
+$var reg 32 ? total_grants [31:0] $end
+$var reg 32 @ total_requests [31:0] $end
+$var integer 32 A i [31:0] $end
+$upscope $end
+$scope task apb_write $end
+$var reg 8 B addr [7:0] $end
+$var reg 32 C data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx C
+bx B
+b100 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+08
+b0 7
+b11 6
+b0 5
+04
+03
+b0 2
+b1000 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+1+
+b0 *
+0)
+0(
+b0 '
+0&
+0%
+b0 $
+b0 #
+1"
+b0 !
+$end
+#5000
+b100 A
+1)
+#10000
+0)
+#15000
+b100 A
+1)
+#20000
+0)
+b11 C
+b0 B
+0+
+#25000
+b11 '
+b11 -
+1(
+1&
+b100 A
+1)
+#30000
+0)
+#35000
+1%
+b100 A
+1)
+#40000
+0)
+#45000
+b0 '
+b0 -
+0(
+0%
+0&
+b100 A
+b10 C
+b100 B
+1)
+#50000
+0)
+#55000
+b10 '
+b10 -
+b100 $
+b100 ,
+1(
+1&
+b100 A
+1)
+#60000
+0)
+#65000
+1%
+b100 A
+1)
+#70000
+0)
+#75000
+b0 '
+b0 -
+b0 $
+b0 ,
+0(
+0%
+0&
+b100 A
+b1 C
+b1000 B
+1)
+#80000
+0)
+#85000
+b1 '
+b1 -
+b1000 $
+b1000 ,
+1(
+1&
+b100 A
+1)
+#90000
+0)
+#95000
+1%
+b100 A
+1)
+#100000
+0)
+#105000
+b0 '
+b0 -
+b0 $
+b0 ,
+0(
+0%
+0&
+b100 A
+b0 C
+b1100 B
+1)
+#110000
+0)
+#115000
+b1100 $
+b1100 ,
+1(
+1&
+b100 A
+1)
+#120000
+0)
+#125000
+1%
+b100 A
+1)
+#130000
+0)
+#135000
+b0 $
+b0 ,
+0(
+0%
+0&
+b100 A
+b1000 C
+b10000 B
+1)
+#140000
+0)
+#145000
+b1000 '
+b1000 -
+b10000 $
+b10000 ,
+1(
+1&
+b100 A
+1)
+#150000
+0)
+#155000
+1%
+b100 A
+1)
+#160000
+0)
+#165000
+b0 '
+b0 -
+b0 $
+b0 ,
+0(
+0%
+0&
+b100 A
+b11 C
+b10100 B
+1)
+#170000
+0)
+#175000
+b11 '
+b11 -
+b10100 $
+b10100 ,
+1(
+1&
+b100 A
+1)
+#180000
+0)
+#185000
+1%
+b100 A
+1)
+#190000
+0)
+#195000
+b0 '
+b0 -
+b0 $
+b0 ,
+0(
+0%
+0&
+b100 A
+1)
+#200000
+0)
+#205000
+b100 A
+1)
+#210000
+0)
+#215000
+b100 A
+1)
+#220000
+0)
+#225000
+b100 A
+1)
+#230000
+0)
+#235000
+b100 A
+1)

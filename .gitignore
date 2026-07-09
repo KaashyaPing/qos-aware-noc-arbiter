@@ -1,0 +1,29 @@
+# ===================================
+# Icarus Verilog Build Outputs
+# ===================================
+
+arbiter
+fifo
+qos
+round_robin
+starvation
+apb_read
+apb_write
+
+# VVP executables
+*.vvp
+
+# GTKWave save files
+*.gtkw
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
