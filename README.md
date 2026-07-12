@@ -1,5 +1,9 @@
 # QoS-Aware NoC Traffic Arbitration IP
 
+![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+
 *A configurable Verilog-based Network-on-Chip (NoC) traffic arbitration IP featuring QoS-aware scheduling, Round-Robin arbitration, aging-based starvation prevention, congestion monitoring, runtime performance counters, and an APB memory-mapped configuration interface.*
 
 ---
@@ -11,6 +15,30 @@ Modern System-on-Chip (SoC) designs often contain multiple bus masters competing
 This project implements a **QoS-Aware Network-on-Chip (NoC) Traffic Arbiter** in Verilog that provides configurable scheduling policies while maintaining fairness and preventing starvation. The design also includes an **APB slave interface** for runtime configuration and exposes **performance counters** to monitor arbitration behavior.
 
 The project was developed with a modular RTL architecture and verified through multiple simulation testbenches using **Icarus Verilog** and **GTKWave**.
+
+---
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Why This Project?](#why-this-project)
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Arbitration Pipeline](#arbitration-pipeline)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
+- [Project Build](#project-build)
+- [Running the Simulation](#running-the-simulation)
+- [Viewing Waveforms](#viewing-waveforms)
+- [APB Register Map](#apb-register-map)
+- [Performance Counters](#performance-counters)
+- [Verification](#verification)
+- [Results](#results)
+- [Waveform Gallery](#waveform-gallery)
+- [Future Enhancements](#future-enhancements)
+- [Technologies Used](#technologies-used)
+- [License](#license)
+- [Author](#author)
 
 ---
 
@@ -98,6 +126,10 @@ qos-aware-noc-arbiter/
 │   ├── architecture.png
 │   ├── arbitration_pipeline.png
 │   └── register_map.png
+|   ├── round_robin.png
+|   ├── qos.png
+|   ├── apb_write.png
+|   └── apb_read.png
 │
 ├── waveforms/
 │   ├── arbiter.vcd
@@ -131,10 +163,7 @@ The project has been developed and verified using the following tools:
 ## Clone the Repository
 
 ```bash
----
-
 git clone https://github.com/KaashyaPing/qos-aware-noc-arbiter.git
-
 cd qos-aware-noc-arbiter
 ```
 
@@ -347,7 +376,6 @@ The APB read interface provides software access to configuration registers and r
 </p>
 
 ---
----
 
 # Future Enhancements
 
@@ -380,4 +408,13 @@ The current implementation provides a configurable and reusable QoS-aware arbitr
 
 This project is released under the MIT License. See the `LICENSE` file for additional information.
 ---
+# Author
+
+**Kaashyap Sai Varma Bhupathiraju**
+
+Electronics and Communication Engineering Student
+
+GitHub: [@KaashyaPing](https://github.com/KaashyaPing)
+
+This project was developed as a portfolio-quality RTL design to demonstrate digital design, hardware verification, and SoC interconnect concepts relevant to FPGA and ASIC development.
 
