@@ -37,8 +37,6 @@ This project demonstrates the design and verification of a configurable hardware
 
 The QoS-Aware NoC Traffic Arbitration IP is organized into modular RTL blocks to improve readability, reusability, and scalability.
 
-> **Note:** Place the architecture diagram at `docs/architecture.png`.
-
 <p align="center">
   <img src="docs/architecture.png" alt="Architecture Diagram" width="850"/>
 </p>
@@ -60,8 +58,6 @@ The design consists of the following functional blocks:
 ## Arbitration Pipeline
 
 The arbitration decision follows the pipeline shown below.
-
-> **Note:** Place the pipeline diagram at `docs/arbitration_pipeline.png`.
 
 <p align="center">
   <img src="docs/arbitration_pipeline.png" alt="Arbitration Pipeline" width="850"/>
@@ -236,8 +232,6 @@ The arbiter includes an APB slave interface that allows software to configure ar
 |  `0x34` | Counter Reset        | Clears all performance counters                   |
 
 > **Register Map Diagram**
-
-Place the register map image in `docs/register_map.png`.
 
 <p align="center">
   <img src="docs/register_map.png" alt="APB Register Map" width="850"/>
