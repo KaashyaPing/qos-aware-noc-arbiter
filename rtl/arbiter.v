@@ -71,9 +71,9 @@ always @(posedge clk or posedge reset) begin
         
         pointer <= next_pointer;
 
-//--------------------------------------------------
+
 // APB Counter Reset
-//--------------------------------------------------
+
 if (PSEL && PENABLE && PWRITE && PADDR == 8'h34)
 begin
     total_requests    <= 0;
@@ -86,9 +86,8 @@ begin
     qos_grants[3] <= 0;
 end
 
-//--------------------------------------------------
 // Normal Counter Updates
-//--------------------------------------------------
+
 else
 begin
     total_requests <= total_requests + active_requests;
@@ -464,9 +463,8 @@ always @(*) begin
 
 end
 
-//==============================================================================
 // APB Slave Interface
-//==============================================================================
+
 always @(*) begin
     PRDATA = 32'd0;
 
