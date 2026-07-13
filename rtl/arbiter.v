@@ -14,21 +14,32 @@ module arbiter(
     output reg PREADY
 );
 
+// Arbitration logic
 reg [1:0] pointer;
 reg [1:0] next_pointer;
-reg [3:0] age_counter [3:0];
+
 integer i;
+
+// Aging logic 
+reg [3:0] age_counter [3:0];
 reg [3:0] age_limit_reg;
 reg aged_request_found;
 reg [1:0] aged_request;
+
+// QoS scheduling
 reg high_pri_found;
 reg [1:0] high_pri_request;
+
 reg [3:0] same_pri_req;
 reg [1:0] highest_priority;
 reg [2:0] congestion_threshold_reg;
+
+//Congestion monitoring
 reg [2:0] active_requests;
 reg congestion;
 reg [1:0] congestion_level;
+
+//Performance counter
 reg [31:0] total_requests;
 reg [31:0] total_grants;
 reg [31:0] starvation_events;
@@ -52,7 +63,7 @@ always @(posedge clk or posedge reset) begin
         qos_grants[3] <= 0;
 
         
-
+    //Configuration parameters
         age_limit_reg <= 4'd8;
         congestion_threshold_reg <= 3'd3;
     end
@@ -452,6 +463,10 @@ always @(*) begin
         same_pri_req[3] = 1'b1;
 
 end
+
+//==============================================================================
+// APB Slave Interface
+//==============================================================================
 always @(*) begin
     PRDATA = 32'd0;
 
